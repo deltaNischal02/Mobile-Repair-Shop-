@@ -342,7 +342,7 @@
 }
 
 .featuresContainer {
-  height: 250px;
+  height: 220px;
   width: 250px;
   background-color: white;
   display: flex;
@@ -359,13 +359,10 @@
   box-shadow: 0px 0px 10px rgb(193, 183, 183);
 }
 
-.featuresContainer img {
-  height: 50%;
-  margin: 20px;
-}
+
 
 .featuresContainer img {
-  height: 40%;
+  height: 30%;
   margin: 20px;
   transition: transform 0.3s ease;
 }
@@ -393,7 +390,7 @@
 
 /* CSS for the fourth section */
 .fourthSection {
-  height: 140vh;
+  height: 120vh;
 }
 .fourthSection img {
   height: 100%;
