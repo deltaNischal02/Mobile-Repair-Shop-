@@ -36,6 +36,10 @@
       emailInput.classList.remove('error');
     }
 
+
+
+    
+
     // Validate the contact number field
     const numberInput = document.getElementById('number');
     if (numberInput.value.trim() === '' || isNaN(numberInput.value)) {
