@@ -700,7 +700,7 @@
 
 /* for map section */
 .Map {
-  height: 80vh;
+  height: 100vh;
   /* background-color: #ea8a8a; */
   display: flex;
   justify-content: space-around;
