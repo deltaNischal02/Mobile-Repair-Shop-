@@ -302,19 +302,20 @@
   transform: translate(-50%, -50%);
   padding: 20px;
   max-width: 800px;
-  background-color: rgba(234, 234, 234, 0.8);
+  background-color: rgba(255, 255, 255, 0.8);
   text-align: center;
-  height: 200px;
+  height: 150px;
   z-index: 1;
   cursor: pointer;
 }
 
 .whyChooseText span {
-  font-size: 40px;
+  font-size: 30px;
+  font-weight: bolder;
 }
 
 .whyChooseText p {
-  font-size: 30px;
+  font-size: 25px;
 }
 
 .whyChoose {
@@ -622,14 +623,23 @@
 }
 
 .reviewSection {
-  height: 50vh;
-  display: flex;
-  align-items: center;
-  justify-content: space-around;
+  height: 80vh;
+  background-color: aliceblue;
+  /* display: flex; */
+  
 }
-.reviewSection h2 {
+.reviewSection h3 {
   text-align: center;
   display: block;
+}
+.comment{
+  height: 70vh;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  
+
+ 
 }
 .card {
   background-color: rgba(243, 244, 246, 1);
@@ -706,7 +716,7 @@
 }
 
 .mapouter {
-  box-shadow: 20px 20px 20px gray;
+  box-shadow: 10px 10px 10px gray;
   margin-top: 20px;
   width: 600px;
 }
