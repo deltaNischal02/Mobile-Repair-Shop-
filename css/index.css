@@ -711,6 +711,7 @@
   width: 600px;
 }
 .mapSection h3 {
+  
   font-size: 30px;
 }
 
@@ -728,7 +729,9 @@ footer {
   gap: 10px;
 }
 .Openinghour h3 {
+  text-align: center;
   font-size: 30px;
+  
 }
 .openingTime {
   margin-top: 20px;
@@ -737,8 +740,8 @@ footer {
   font-size: 20px;
   line-height: 50px;
   text-align: center;
-  box-shadow: 25px 25px 20px linear-gradient(to right, #235789, #c1292e) 1;
-  border: 1px solid;
+  /* box-shadow: 25px 25px 20px linear-gradient(to right, #235789, #c1292e) 1; */
+  /* border: 1px solid; */
 }
 .openingTime span {
   text-decoration: underline;
