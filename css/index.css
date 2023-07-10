@@ -1,0 +1,747 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* CSS for navbar */
+.navbar {
+  z-index: 999;
+  position: sticky;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: #fff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  display: block;
+}
+
+.navbar-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.navbar-logo {
+  font-weight: bold;
+  font-size: 20px;
+}
+
+/* CSS for landing page */
+.landingPage {
+  height: 100vh;
+  background-color: #eaeaea;
+  background-position-y: top;
+  background-image: url(../images/landing-page-final.png);
+  transform: skewY(50%);
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.textContainer {
+  /* Add your container styles here */
+  /* e.g., border: 2px dashed red; */
+  top: 30%;
+  left: 55%;
+  position: absolute;
+  text-align: center;
+}
+
+.animate {
+  font-size: 50px;
+  /* background-color: #235789; */
+  overflow: hidden;
+}
+
+/* button */
+.fancy {
+  position: relative;
+  top: 40%;
+  right: 25%;
+  background-color: transparent;
+  border: 2px solid #000;
+  border-radius: 0;
+  box-sizing: border-box;
+  color: #fff;
+  cursor: pointer;
+  display: inline-block;
+  float: right;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  margin: 0;
+  outline: none;
+  overflow: visible;
+  padding: 1em 1.25em;
+  position: relative;
+  text-align: center;
+  text-decoration: none;
+  text-transform: none;
+  transition: all 0.3s ease-in-out;
+  user-select: none;
+  font-size: 15px;
+ }
+ 
+ .fancy::before {
+  content: " ";
+  width: 1.5625rem;
+  height: 2px;
+  background: black;
+  top: 50%;
+  left: 1.5em;
+  position: absolute;
+  transform: translateY(-50%);
+  transform-origin: center;
+  transition: background 0.3s linear, width 0.3s linear;
+ }
+ 
+ .fancy .text {
+  font-size: 1.125em;
+  line-height: 1.33333em;
+  padding-left: 2em;
+  display: block;
+  text-align: left;
+  transition: all 0.3s ease-in-out;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: black;
+ }
+ 
+ .fancy .top-key {
+  height: 2px;
+  width: 1.5625rem;
+  top: -2px;
+  left: 0.625rem;
+  position: absolute;
+  background: #e8e8e8;
+  transition: width 0.5s ease-out, left 0.3s ease-out;
+ }
+ 
+ .fancy .bottom-key-1 {
+  height: 2px;
+  width: 1.5625rem;
+  right: 1.875rem;
+  bottom: -2px;
+  position: absolute;
+  background: #e8e8e8;
+  transition: width 0.5s ease-out, right 0.3s ease-out;
+ }
+ 
+ .fancy .bottom-key-2 {
+  height: 2px;
+  width: 0.625rem;
+  right: 0.625rem;
+  bottom: -2px;
+  position: absolute;
+  background: #e8e8e8;
+  transition: width 0.5s ease-out, right 0.3s ease-out;
+ }
+ 
+ .fancy:hover {
+  color: white;
+  background: black;
+ }
+ 
+ .fancy:hover::before {
+  width: 0.9375rem;
+  background: white;
+ }
+ 
+ .fancy:hover .text {
+  color: white;
+  padding-left: 1.5em;
+ }
+ 
+ .fancy:hover .top-key {
+  left: -2px;
+  width: 0px;
+ }
+ 
+ .fancy:hover .bottom-key-1,
+  .fancy:hover .bottom-key-2 {
+  right: 0;
+  width: 0;
+ }
+
+/* Animation */
+.animate::after {
+  content: "PHONE?";
+  display: inline-block;
+  animation: animation 8s steps(1) infinite;
+  /* width: 6ch; */
+  color: #235789;
+}
+
+.animate::before {
+  display: inline-block;
+  content: "";
+  width: 6ch;
+  height: 100px;
+  right: 0;
+  position: absolute;
+  animation: blinking 6s linear alternate infinite;
+}
+
+@keyframes animation {
+  20% {
+    content: "LAPTOP?";
+    /* width: 9ch; */
+  }
+
+  40% {
+    /* width: 0ch; */
+  }
+
+  55% {
+    content: "TABLET?";
+    /* width: 9ch; */
+  }
+
+  75% {
+    /* width: 0ch; */
+  }
+}
+
+@keyframes blinking {
+  100% {
+    opacity: 0;
+    color: rgb(89, 255, 0);
+  }
+}
+
+/* CSS for the middle section */
+.middleSection {
+  height: 10vh;
+}
+
+/* CSS for the second section */
+.secondSection {
+  height: 100vh;
+}
+
+.servicesText {
+  text-align: center;
+  font-size: 50px;
+  margin-top: 2em;
+  position: relative;
+}
+.servicesText span {
+  color: #235789;
+}
+.servicesText::before {
+  content: "";
+  display: block;
+  border-bottom: 5px solid #ffc800;
+
+  width: 50px;
+
+  position: absolute;
+  padding-bottom: 10px;
+  bottom: -10px;
+  left: 49%;
+  /* height: -102px; */
+}
+
+.gadgets {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-top: 30px;
+}
+
+.gadgetsContainer {
+  height: 150px;
+  width: 280px;
+  background-color: white;
+  display: flex;
+  align-items: center;
+  border-radius: 6px;
+  text-align: center;
+  box-shadow: 0px 0px 3px rgb(201, 192, 192);
+  cursor: pointer;
+  flex-direction: column;
+  margin: 30px;
+}
+
+.gadgetsContainer:hover {
+  box-shadow: 0px 0px 10px rgb(193, 183, 183);
+}
+
+.gadgetsContainer img {
+  height: 50%;
+  margin: 20px;
+  transition: transform 0.3s ease;
+}
+.gadgetsContainer:hover img {
+  transform: scale(1.1);
+}
+
+.gadgetsContainer span {
+  color: #235789;
+  text-align: center;
+  font-size: 25px;
+  /* color: #333; */
+  margin-top: -10px;
+  margin-bottom: 5px;
+}
+
+/* CSS for the third section */
+.thirdSection {
+  height: 80vh;
+  position: relative;
+}
+
+.whyChooseText {
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 20px;
+  max-width: 800px;
+  background-color: rgba(234, 234, 234, 0.8);
+  text-align: center;
+  height: 200px;
+  z-index: 1;
+  cursor: pointer;
+}
+
+.whyChooseText span {
+  font-size: 40px;
+}
+
+.whyChooseText p {
+  font-size: 30px;
+}
+
+.whyChoose {
+  position: relative;
+  height: 100%;
+  z-index: 0;
+}
+
+.whyChooseImage {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  opacity: 80%;
+  transition: opacity 2s ease-in-out ;
+}
+
+.features {
+  position: relative;
+  top: -30%;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-top: 30px;
+  z-index: 2;
+}
+
+.featuresContainer {
+  height: 250px;
+  width: 250px;
+  background-color: white;
+  display: flex;
+  align-items: center;
+  border-radius: 6px;
+  text-align: center;
+  box-shadow: 0px 0px 3px rgb(201, 192, 192);
+  cursor: pointer;
+  flex-direction: column;
+  margin: 30px;
+}
+
+.featuresContainer:hover {
+  box-shadow: 0px 0px 10px rgb(193, 183, 183);
+}
+
+.featuresContainer img {
+  height: 50%;
+  margin: 20px;
+}
+
+.featuresContainer img {
+  height: 40%;
+  margin: 20px;
+  transition: transform 0.3s ease;
+}
+
+.featuresContainer:hover img {
+  transform: scale(1.1);
+  font-size: 25px;
+}
+
+.featuresContainer span {
+  text-align: center;
+  font-size: 20px;
+  color: #235789;
+  margin-top: -10px;
+  margin-bottom: 5px;
+  font-weight: bold;
+  text-decoration: dashed;
+}
+
+.featuresContainer p {
+  text-align: center;
+  font-size: 15px;
+  width: 80%;
+}
+
+/* CSS for the fourth section */
+.fourthSection {
+  height: 140vh;
+}
+.fourthSection img {
+  height: 100%;
+  width: 100%;
+}
+
+.imagecontainer {
+  height: 400px;
+  width: 400px;
+  position: relative;
+  top: 35%;
+  left: 15%;
+}
+
+.imagecontainer img {
+  box-shadow: -20px 30px 20px gray;
+  border-radius: 50%;
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
+.happyText {
+  position: relative;
+  height: 250px;
+  width: 700px;
+  left: 50%;
+  top: -7%;
+  text-align: center;
+}
+
+.happyText span {
+  font-size: 40px;
+  text-align: center;
+  /* font-weight: bold; */
+}
+
+.happyText p {
+  font-size: 25px;
+  margin: 20px;
+  /* width: 80%; */
+}
+
+/* CSS for increasing number */
+.box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  left: 47%;
+  top: -10%;
+  max-width: 800px;
+}
+
+.numberBox,
+.numberBox2 {
+  width: 250px;
+  height: 50px;
+  background-color: #ffffff;
+  box-shadow: 0px 0px 5px rgb(193, 183, 183);
+  display: flex;
+  /* flex-direction: column; */
+  justify-content: center;
+  align-items: center;
+  margin: 20px;
+  cursor: pointer;
+  max-width: 300px;
+  border-radius: 5px;
+}
+.numberBox:hover,
+.numberBox2:hover {
+  box-shadow: 0px 0px 20px rgb(193, 183, 183);
+}
+.number,
+.number2 {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.text {
+  margin-top: 10px;
+  font-size: 18px;
+  font-weight: bold;
+  color: #555555;
+}
+
+/* Media Queries for responsiveness */
+
+/* iPhone 13 */
+@media (max-width: 428px) {
+  .servicesText {
+    font-size: 30px;
+  }
+
+  .gadgetsContainer {
+    height: 200px;
+    width: 240px;
+  }
+
+  .gadgetsContainer img {
+    height: 40%;
+    margin: 15px;
+  }
+
+  .gadgetsContainer span {
+    font-size: 20px;
+  }
+
+  .whyChooseText {
+    top: 35%;
+  }
+
+  .featuresContainer {
+    height: 600px;
+    width: 240px;
+  }
+
+  .featuresContainer img {
+    height: 35%;
+    margin: 15px;
+  }
+
+  .featuresContainer span {
+    font-size: 30px;
+  }
+
+  .featuresContainer p {
+    font-size: 20px;
+  }
+
+  .imagecontainer {
+    height: 300px;
+    width: 300px;
+  }
+
+  .happyText span {
+    font-size: 30px;
+  }
+
+  .happyText p {
+    font-size: 20px;
+  }
+
+  .numberBox,
+  .numberBox2 {
+    width: 120px;
+    height: 120px;
+  }
+
+  .number,
+  .number2 {
+    font-size: 18px;
+  }
+
+  .text {
+    font-size: 14px;
+  }
+}
+
+/* iPad */
+@media (min-width: 768px) and (max-width: 1024px) {
+  .servicesText {
+    font-size: 40px;
+  }
+
+  .gadgetsContainer {
+    height: 200px;
+    width: 240px;
+  }
+
+  .gadgetsContainer img {
+    height: 40%;
+    margin: 15px;
+  }
+
+  .gadgetsContainer span {
+    font-size: 20px;
+  }
+
+  .whyChooseText {
+    top: 35%;
+  }
+
+  .featuresContainer {
+    height: 300px;
+    width: 240px;
+  }
+
+  .featuresContainer img {
+    height: 35%;
+    margin: 15px;
+  }
+
+  .featuresContainer span {
+    font-size: 30px;
+  }
+
+  .featuresContainer p {
+    font-size: 20px;
+  }
+
+  .imagecontainer {
+    height: 300px;
+    width: 300px;
+  }
+
+  .happyText span {
+    font-size: 30px;
+  }
+
+  .happyText p {
+    font-size: 20px;
+  }
+
+  .numberBox,
+  .numberBox2 {
+    width: 120px;
+    height: 120px;
+  }
+
+  .number,
+  .number2 {
+    font-size: 18px;
+  }
+
+  .text {
+    font-size: 14px;
+  }
+}
+
+.reviewSection {
+  height: 50vh;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+.reviewSection h2 {
+  text-align: center;
+  display: block;
+}
+.card {
+  background-color: rgba(243, 244, 246, 1);
+  padding: 2rem;
+  max-width: 320px;
+  border-radius: 10px;
+  box-shadow: 0 20px 30px -20px rgba(5, 5, 5, 0.24);
+  /* animation: scroll 10s timing-function delay iteration-count direction fill-mode; */
+  animation: scroll 10s linear infinite;
+}
+/* animation for sliding comments */
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(100);
+  }
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  grid-gap: 1rem;
+  gap: 1rem;
+}
+
+.header .image img {
+  height: 4rem;
+  width: 4rem;
+  border-radius: 9999px;
+  object-fit: cover;
+  background-color: royalblue;
+}
+
+.stars {
+  display: flex;
+  justify-content: center;
+  grid-gap: 0.125rem;
+  gap: 0.125rem;
+  color: rgba(34, 197, 94, 1);
+}
+
+.stars svg {
+  height: 1rem;
+  width: 1rem;
+}
+
+.name {
+  margin-top: 0.25rem;
+  font-size: 1.125rem;
+  line-height: 1.75rem;
+  font-weight: 600;
+  --tw-text-opacity: 1;
+  color: rgba(55, 65, 81, 1);
+}
+
+.message {
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  margin-top: 1rem;
+  color: rgba(107, 114, 128, 1);
+}
+
+/* for map section */
+.Map {
+  height: 80vh;
+  /* background-color: #ea8a8a; */
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  text-align: center;
+}
+
+.mapouter {
+  box-shadow: 20px 20px 20px gray;
+  margin-top: 20px;
+  width: 600px;
+}
+.mapSection h3 {
+  font-size: 30px;
+}
+
+/* css for footer */
+footer {
+  height: auto;
+  background-color: #333;
+  background-image: url(../images/pexels-mart-production-9558232.png);
+}
+/* opening hour */
+.Openinghour {
+  /* border: 2px soild red; */
+  height: 400px;
+  width: 300px;
+  gap: 10px;
+}
+.Openinghour h3 {
+  font-size: 30px;
+}
+.openingTime {
+  margin-top: 20px;
+  cursor: pointer;
+  /* background-color: #ffffff; */
+  font-size: 20px;
+  line-height: 50px;
+  text-align: center;
+  box-shadow: 25px 25px 20px linear-gradient(to right, #235789, #c1292e) 1;
+  border: 1px solid;
+}
+.openingTime span {
+  text-decoration: underline;
+}
+/* css for user Comment */
